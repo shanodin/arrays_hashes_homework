@@ -2,16 +2,18 @@
 
 lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'Princes Street']
 
-# # 1. Work out how many stops there are in the array
+# 1. Work out how many stops there are in the array
 puts lines.length()
 
-# # 2. Return 'Edinburgh Park' from the array
+# 2. Return 'Edinburgh Park' from the array
 return lines[1]
 
-# # # 3. How many ways can we return 'Princes Street' from the array?
+# 3. How many ways can we return 'Princes Street' from the array?
 return lines.last
 #OR
 return lines[4]
+#return lines[-1]
+#return lines.pop - this one removes it after outputting it
 
 # # 4. Work out the index position of 'Haymarket'
 puts lines.index("Haymarket")
@@ -104,15 +106,21 @@ return users["Avril"][:pets]["colin"]
 
 # 5. Return the smallest of Erik's favorite numbers
 return users["Erik"][:favourite_numbers][0]
+#return users["Erik"][:favourite_numbers].min
+#return users["Erik"][:favourite_numbers].first
 
 # 6. Add the number `7` to Erik's favorite numbers
 users["Erik"][:favourite_numbers].unshift 7
+#users["Erik"][:favourite_numbers].push(7)
+# eriks_numbers = [users][:favourite_numbers]
+# eriks_numbers.push(7)
 
 # 7. Change Erik's hometown to Edinburgh
 users["Erik"][:home_town] = "Edinburgh"
 
 # 8. Add a pet dog to Erik called "Fluffy"
 users["Erik"][:pets]["fluffy"] = "dog"
+# users["Erik"][:pets]["fluffy"] = :dog
 
 # 9. Add yourself to the users hash
 users["Alice"] = {
@@ -122,3 +130,6 @@ users["Alice"] = {
   pets: {
     none: "no pets"}
   }
+
+  #favourite_numbers: [438]
+  #"none" => :no_pets
